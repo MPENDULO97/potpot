@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio | Advanced Digital Associate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #4a6cf7;
@@ -17,7 +20,7 @@
             --gray: #6c757d;
             --light-gray: #e9ecef;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -28,7 +31,7 @@
             scroll-behavior: smooth;
             height: 100%;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: #333;
@@ -39,23 +42,27 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        
-        h1, h2, h3, h4, h5 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             margin-bottom: 1rem;
             color: orange;
         }
 
-       
-        
+
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-        
+
         /* Header & Navigation */
         header {
             background-color: rgba(255, 255, 255, 0.95);
@@ -66,31 +73,31 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 0;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--secondary);
         }
-        
+
         .social-links a {
             font-weight: 500;
             transition: color 0.3s;
             position: relative;
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -101,31 +108,32 @@
             background: linear-gradient(to right, var(--primary), var(--secondary));
             transition: width 0.3s;
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .hamburger {
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
         }
-        
+
         /* Hero Section */
         .hero {
-            margin-top: 100px; /* Prevent navbar overlap */
+            margin-top: 100px;
+            /* Prevent navbar overlap */
             padding: 8rem 0 6rem;
             background: linear-gradient(135deg, rgba(74, 108, 247, 0.08) 0%, rgba(111, 66, 193, 0.08) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -136,7 +144,7 @@
             border-radius: 50%;
             background: linear-gradient(135deg, rgba(74, 108, 247, 0.1) 0%, rgba(111, 66, 193, 0.1) 100%);
         }
-        
+
         .hero::after {
             content: '';
             position: absolute;
@@ -147,29 +155,30 @@
             border-radius: 50%;
             background: linear-gradient(135deg, rgba(32, 201, 151, 0.1) 0%, rgba(74, 108, 247, 0.1) 100%);
         }
-        
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             color: var(--gray);
             margin-bottom: 2rem;
             color: #e4e8f0;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 0.8rem 1.8rem;
@@ -182,29 +191,29 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         /* Section Styling */
         section {
             padding: 5rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .section-title h2 {
             font-size: 2.5rem;
             position: relative;
             display: inline-block;
             padding-bottom: 0.5rem;
         }
-        
+
         .section-title h2::after {
             content: '';
             position: absolute;
@@ -216,14 +225,14 @@
             background: linear-gradient(to right, var(--primary), var(--secondary));
             border-radius: 2px;
         }
-        
+
         /* About Section */
         .about-content {
             display: flex;
             align-items: center;
             gap: 3rem;
         }
-        
+
         .about-img {
             flex: 1;
             border-radius: 15px;
@@ -231,43 +240,43 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .about-img:hover {
             transform: translateY(-5px);
         }
-        
+
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .about-text {
             flex: 1;
         }
-        
+
         .about-text h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .education-item {
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
             border-left: 3px solid var(--primary);
         }
-        
+
         /* Skills Section */
         .skills {
             background-color: var(--light);
         }
-        
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+
         .skill-item {
             background: white;
             padding: 2rem;
@@ -276,24 +285,24 @@
             text-align: center;
             transition: transform 0.3s;
         }
-        
+
         .skill-item:hover {
             transform: translateY(-5px);
         }
-        
+
         .skill-icon {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        
+
         /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .project-card {
             background: white;
             border-radius: 10px;
@@ -301,42 +310,42 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .project-img {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .project-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-        
+
         .project-card:hover .project-img img {
             transform: scale(1.05);
         }
-        
+
         .project-info {
             padding: 1.5rem;
         }
-        
+
         /* Certificates Section */
         .certificates {
             background-color: var(--light);
         }
-        
+
         .certificates-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .certificate-card {
             background: white;
             padding: 1.5rem;
@@ -345,36 +354,36 @@
             text-align: center;
             transition: transform 0.3s;
         }
-        
+
         .certificate-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .certificate-icon {
             font-size: 3rem;
             color: var(--secondary);
             margin-bottom: 1rem;
         }
-        
+
         /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
-        
+
         .contact-info {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .contact-icon {
             width: 50px;
             height: 50px;
@@ -387,19 +396,19 @@
             font-size: 1.2rem;
             flex-shrink: 0;
         }
-        
-    /* .contact-form styles moved to styles.css for better separation */
-        
+
+        /* .contact-form styles moved to styles.css for better separation */
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
-        
+
         .form-control {
             width: 100%;
             padding: 0.8rem 1rem;
@@ -408,17 +417,17 @@
             font-family: 'Poppins', sans-serif;
             transition: border-color 0.3s;
         }
-        
+
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
         }
-        
+
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -426,14 +435,14 @@
             padding: 3rem 0;
             text-align: center;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             margin: 2rem 0;
         }
-        
+
         .social-links a {
             display: flex;
             align-items: center;
@@ -446,12 +455,12 @@
             text-decoration: none;
             transition: background 0.3s, transform 0.3s;
         }
-        
+
         .social-links a:hover {
             background: var(--primary);
             transform: translateY(-3px);
         }
-        
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -462,9 +471,9 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
         }
-        
+
         .modal-content {
             background-color: #fff;
             margin: 10% auto;
@@ -472,10 +481,10 @@
             border-radius: 10px;
             width: 90%;
             max-width: 400px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
-        
+
         .close {
             color: #aaa;
             float: right;
@@ -486,48 +495,51 @@
             right: 20px;
             top: 10px;
         }
-        
+
         .close:hover {
             color: #333;
         }
-        
+
         .modal-content ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .modal-content ul li {
             margin: 1rem 0;
         }
-        
+
         .modal-content ul li a {
             color: var(--primary);
             font-weight: bold;
             text-decoration: underline;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
             }
-            
+
             .hero h1 {
                 font-size: 2.8rem;
             }
-          .contact-container {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 2rem;
-            align-items: stretch;
-          }
-          .contact-info, .contact-form {
-            width: 100% !important;
-            max-width: 100% !important;
-            margin: 0 auto;
-          }
+
+            .contact-container {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 2rem;
+                align-items: stretch;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto;
+            }
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -540,143 +552,191 @@
                 padding: 1rem 0;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .nav-links li {
                 margin: 0.5rem 1.5rem;
             }
-            
+
             .hamburger {
                 display: block;
             }
-            
+
             .hero h1 {
                 font-size: 2.3rem;
             }
-            
+
             .section-title h2 {
                 font-size: 2rem;
             }
-          .contact-container {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 1.5rem;
-            align-items: stretch;
-          }
-          .contact-info, .contact-form {
-            width: 100% !important;
-            max-width: 100% !important;
-            margin: 0 auto;
-          }
-          .form-group label, .form-control, textarea.form-control {
-            font-size: 1rem !important;
-          }
-          .btn {
-            width: 100%;
-            font-size: 1.1rem;
-          }
+
+            .contact-container {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem;
+                align-items: stretch;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto;
+            }
+
+            .form-group label,
+            .form-control,
+            textarea.form-control {
+                font-size: 1rem !important;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 1.1rem;
+            }
         }
-        
+
         @media (max-width: 576px) {
             .hero h1 {
                 font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .btn {
                 padding: 0.6rem 1.5rem;
             }
-            
+
             .social-links {
                 gap: 1rem;
             }
-          .contact-container {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 1rem;
-            align-items: stretch;
-          }
-          .contact-info, .contact-form {
-            width: 100% !important;
-            max-width: 100% !important;
-            margin: 0 auto;
-          }
-          .form-group label, .form-control, textarea.form-control {
-            font-size: 0.95rem !important;
-          }
-          .btn {
-            width: 100%;
-            font-size: 1rem;
-          }
+
+            .contact-container {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto;
+            }
+
+            .form-group label,
+            .form-control,
+            textarea.form-control {
+                font-size: 0.95rem !important;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 1rem;
+            }
         }
+
         .contact-form form {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
+
         .form-group {
-          width: 100%;
+            width: 100%;
         }
-        .form-control, textarea.form-control {
-          width: 100%;
-          box-sizing: border-box;
+
+        .form-control,
+        textarea.form-control {
+            width: 100%;
+            box-sizing: border-box;
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">MPENDULO_GULE.Portfo<span>lio</span></a>
-                <ul class="nav-links" style="display:flex;flex-direction:row;align-items:center;gap:2rem;list-style:none;margin:0;padding:0;">
-                    <li><a href="#home" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#4a6cf7;">Home</a></li>
-                    <li><a href="#about" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#20c997;">About</a></li>
-                    <li><a href="#skills" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#ff6f61;">Skills</a></li>
-                    <li><a href="#projects" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#FFA500;">Projects</a></li>
-                    <li><a href="#certificates" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#4a6cf7;">Certificates</a></li>
-                    <li><a href="#contact" style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#20c997;">Contact</a></li>
+                <ul class="nav-links"
+                    style="display:flex;flex-direction:row;align-items:center;gap:2rem;list-style:none;margin:0;padding:0;">
+                    <li><a href="#home"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#4a6cf7;">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#20c997;">About</a>
+                    </li>
+                    <li><a href="#skills"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#ff6f61;">Skills</a>
+                    </li>
+                    <li><a href="#projects"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#FFA500;">Projects</a>
+                    </li>
+                    <li><a href="#certificates"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#4a6cf7;">Certificates</a>
+                    </li>
+                    <li><a href="#contact"
+                            style="font-weight:bold;font-style:italic;font-family:'Montserrat',sans-serif;color:#20c997;">Contact</a>
+                    </li>
                 </ul>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
-               
+
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" style="background: url('images/sea-9714469_1280.jpg') center/cover no-repeat; position: relative;">
+    <section id="home" class="hero"
+        style="background: url('images/sea-9714469_1280.jpg') center/cover no-repeat; position: relative;">
         <div class="container">
-            <div class="hero-content" style="display:flex;align-items:center;justify-content:center;gap:3rem;max-width:1000px;">
+            <div class="hero-content"
+                style="display:flex;align-items:center;justify-content:center;gap:3rem;max-width:1000px;">
                 <div class="Image" style="flex:1;display:flex;flex-direction:column;align-items:center;">
-                        <img src="images/IMG-20250904-WA0036.jpg" alt="Profile Photo" style="width:100%;max-width:400px;height:auto;object-fit:cover;">
-                        <div class="hero-buttons" style="margin-top:2rem;display:flex;gap:1.5rem;">
-                            <a href="#contact" class="btn" style="background: linear-gradient(90deg,#4a6cf7,#1d2144);color:white;">Hire Me</a>
-                            <a href="#projects" class="btn" style="background: transparent; border: 2px solid #4a6cf7; color: #4a6cf7;">View Projects</a>
-                        </div>
+                    <img src="images/IMG-20250904-WA0036.jpg" alt="Profile Photo"
+                        style="width:100%;max-width:400px;height:auto;object-fit:cover;">
+                    <div class="hero-buttons" style="margin-top:2rem;display:flex;gap:1.5rem;">
+                        <a href="#contact" class="btn"
+                            style="background: linear-gradient(90deg,#4a6cf7,#1d2144);color:white;">Hire Me</a>
+                        <a href="#projects" class="btn"
+                            style="background: transparent; border: 2px solid #4a6cf7; color: #4a6cf7;">View
+                            Projects</a>
                     </div>
-                    <div class="hero-text" style="flex:2;text-align:left;">
-                        <h1 style="color:orange;">Advanced Digital Associate & Full Stack Developer</h1>
-                        <p style="color:#000;font-weight:bold;font-size:1rem;">Building innovative digital solutions with expertise in <span style='color:#000;font-weight:bold;'>full stack development</span> and a unique background in <span style='color:#000;font-weight:bold;'>social sciences</span>.</p>
-                        <p style="max-width:600px;margin:1rem 0 2rem 0;color:#000;font-weight:bold;font-size:1rem;">
-                            Hi, I'm <span style='color:#000;font-weight:bold;'>Mpendulo Gule</span>, a passionate software developer based in <span style='color:#000;font-weight:bold;'>Western Cape, South Africa</span>. With a strong foundation in <span style='color:#000;font-weight:bold;'>social sciences</span> and hands-on experience in <span style='color:#000;font-weight:bold;'>full stack development</span>, I love creating <span style='color:#000;font-weight:bold;'>user-centric digital solutions</span> that make a difference. <span style='color:#000;font-weight:bold;'>Let's connect and build something amazing together!</span>
-                        </p>
-                        <div style="margin-top:1.5rem;color:#000;font-weight:bold;font-size:1rem;">
-                    <span style="color:orange;font-size:1.1rem;font-weight:600;">Contact: </span>
-                    <span style="color:orange;font-size:1.1rem;font-weight:600;">mpendulogule382@gmail.com</span>
-                    <span style="color:#000;font-weight:bold;font-size:1rem;"> | +27784351498/0660241992</span>
-                    <span style="color:orange;font-size:1.1rem;font-weight:600;"> | Western Cape, South Africa</span>
                 </div>
+                <div class="hero-text" style="flex:2;text-align:left;">
+                    <h1 style="color:orange;">Advanced Digital Associate & Full Stack Developer</h1>
+                    <p style="color:#000;font-weight:bold;font-size:1rem;">Building innovative digital solutions with
+                        expertise in <span style='color:#000;font-weight:bold;'>full stack development</span> and a
+                        unique background in <span style='color:#000;font-weight:bold;'>social sciences</span>.</p>
+                    <p style="max-width:600px;margin:1rem 0 2rem 0;color:#000;font-weight:bold;font-size:1rem;">
+                        Hi, I'm <span style='color:#000;font-weight:bold;'>Mpendulo Gule</span>, a passionate software
+                        developer based in <span style='color:#000;font-weight:bold;'>Western Cape, South Africa</span>.
+                        With a strong foundation in <span style='color:#000;font-weight:bold;'>social sciences</span>
+                        and hands-on experience in <span style='color:#000;font-weight:bold;'>full stack
+                            development</span>, I love creating <span style='color:#000;font-weight:bold;'>user-centric
+                            digital solutions</span> that make a difference. <span
+                            style='color:#000;font-weight:bold;'>Let's connect and build something amazing
+                            together!</span>
+                    </p>
+                    <div style="margin-top:1.5rem;color:#000;font-weight:bold;font-size:1rem;">
+                        <span style="color:orange;font-size:1.1rem;font-weight:600;">Contact: </span>
+                        <span style="color:orange;font-size:1.1rem;font-weight:600;">mpendulogule382@gmail.com</span>
+                        <span style="color:#000;font-weight:bold;font-size:1rem;"> | +27784351498/0660241992</span>
+                        <span style="color:orange;font-size:1.1rem;font-weight:600;"> | Western Cape, South
+                            Africa</span>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -692,10 +752,19 @@
                 </div>
                 <div class="about-text">
                     <h3 style="color:orange;">Hello! I'm a Software Developer</h3>
-                    <p style="color:#000;font-weight:bold;font-size:1rem;">I bring a unique perspective to technology with my background in <span style='color:#000;font-weight:bold;'>social sciences</span> and <span style='color:#000;font-weight:bold;'>political studies</span>. My expertise in understanding <span style='color:#000;font-weight:bold;'>human behavior</span> and complex systems, combined with technical skills from <span style='color:#000;font-weight:bold;'>FnB App Academy</span>, allows me to create <span style='color:#000;font-weight:bold;'>user-centric digital solutions</span>.</p>
-                        <div style="margin-top:2rem;">
-                            <a href="resume/Gule Mpendulo cv .pdf" class="btn" download style="background: linear-gradient(90deg,#4a6cf7,#1d2144); color: white; font-weight: bold;">Download Resume</a>
-                        </div>
+                    <p style="color:#000;font-weight:bold;font-size:1rem;">I bring a unique perspective to technology
+                        with my background in <span style='color:#000;font-weight:bold;'>social sciences</span> and
+                        <span style='color:#000;font-weight:bold;'>political studies</span>. My expertise in
+                        understanding <span style='color:#000;font-weight:bold;'>human behavior</span> and complex
+                        systems, combined with technical skills from <span style='color:#000;font-weight:bold;'>FnB App
+                            Academy</span>, allows me to create <span style='color:#000;font-weight:bold;'>user-centric
+                            digital solutions</span>.
+                    </p>
+                    <div style="margin-top:2rem;">
+                        <a href="resume/Gule Mpendulo cv .pdf" class="btn" download
+                            style="background: linear-gradient(90deg,#4a6cf7,#1d2144); color: white; font-weight: bold;">Download
+                            Resume</a>
+                    </div>
                     <div class="education-item">
                         <h4 style="color:orange;">Master's in Political Studies (Current)</h4>
                         <p style="color:#000;font-weight:bold;font-size:1rem;">Walter Sisulu University</p>
@@ -706,347 +775,396 @@
                     </div>
                     <div class="education-item">
                         <h4 style="color:orange;">Bachelor of Social Science</h4>
-                        <p style="color:#000;font-weight:bold;font-size:1rem;">Criminology, Psychology, Political Studies</p>
+                        <p style="color:#000;font-weight:bold;font-size:1rem;">Criminology, Psychology, Political
+                            Studies</p>
                     </div>
-                            <span style="color:orange;font-size:1.1rem;font-weight:600;">Contact: </span>
-                            <span style="color:orange;font-size:1.1rem;font-weight:600;">mpendulogule382@gmail.com</span>
-                            <span style="color:#000;font-weight:bold;font-size:1rem;"> | +27784351498/0660241992</span>
-                            <span style="color:orange;font-size:1.1rem;font-weight:600;"> | Western Cape, South Africa</span>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills" style="background: url('images/mp3.jpg') center/cover no-repeat; position: relative;">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
-            </div>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML5</h3>
-                    <p>Semantic markup, accessibility, and modern HTML5 features.</p>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <h3>CSS3</h3>
-                    <p>Responsive design, Flexbox, Grid, animations, and preprocessors.</p>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p>ES6+, DOM manipulation, async programming, and modern frameworks.</p>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Backend development, data analysis, and automation scripts.</p>
+                    <span style="color:orange;font-size:1.1rem;font-weight:600;">Contact: </span>
+                    <span style="color:orange;font-size:1.1rem;font-weight:600;">mpendulogule382@gmail.com</span>
+                    <span style="color:#000;font-weight:bold;font-size:1rem;"> | +27784351498/0660241992</span>
+                    <span style="color:orange;font-size:1.1rem;font-weight:600;"> | Western Cape, South Africa</span>
                 </div>
             </div>
         </div>
-    </section>
+        </div>
+        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects" style="background: url('images/mp4.jfif') center/cover no-repeat; position: relative;">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
+        <!-- Skills Section -->
+        <section id="skills" class="skills"
+            style="background: url('images/mp3.jpg') center/cover no-repeat; position: relative;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Skills</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                        <p>Semantic markup, accessibility, and modern HTML5 features.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>CSS3</h3>
+                        <p>Responsive design, Flexbox, Grid, animations, and preprocessors.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>ES6+, DOM manipulation, async programming, and modern frameworks.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>Backend development, data analysis, and automation scripts.</p>
+                    </div>
+                </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/istockphoto-872210270-612x612.jpg" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3 style="font-weight:normal;">E-Commerce Website</h3>
-                        <button class="btn" id="viewEcomProjectBtn">View Projects</button>
-                        <div class="project-details" style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                            <p style="color:#FFD700;font-size:1rem;line-height:1.7;font-weight:normal;">
-                                E-Commerce Website is a full-featured online store solution designed to deliver a seamless shopping experience. It includes a dynamic shopping cart, secure user authentication, and integrated payment processing, making it easy for customers to browse, purchase, and manage orders. With a sleek interface and robust backend, this platform is ideal for businesses looking to scale their digital storefront efficiently.
-                            </p>
-                        </div>
-                    </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects"
+            style="background: url('images/mp4.jfif') center/cover no-repeat; position: relative;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Projects</h2>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/swift.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Solutions App</h3>
-                        <button class="btn" id="viewSingleProjectBtn">View Projects</button>
-                        <div class="project-details" style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                            <p style="color:#FFD700;font-size:1rem;line-height:1.7;">
-                                Explore a suite of innovative AI-powered tools designed to elevate productivity and learning. Solutions App Projects streamlines app development and lifecycle management within Power Platform environments, enabling seamless customization and deployment. Content Generator.ai empowers creators with smart, SEO-optimized app descriptions tailored for visibility and engagement. EduSmart App.ai transforms education through personalized learning, real-time quizzes, and intelligent content summarization. Read-Wise App.ai acts as your AI meeting assistant, delivering smart summaries, transcriptions, and actionable insights across platforms. Clause-guard App.ai safeguards your business by analyzing contracts for hidden risks and offering plain-language legal insights. Work-Connect App.ai enhances employee experience with AI-driven communication, task management, and knowledge sharing across hybrid teams. Finally, SWIFT-DROP App.ai is a complete courier and delivery business-in-a-box, offering real-time tracking, merchant management, and white-label branding—all from your mobile device.
-                            </p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/istockphoto-872210270-612x612.jpg" alt="Project 1">
                         </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="images/HTG.jfif" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Health and Travel Safety guide App</h3>
-                        <button class="btn" id="viewDermProjectBtn">View Projects</button>
-                            <div class="project-details" style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-                                <h4 style="color:#4a6cf7;margin-bottom:0.5rem;"></h4>
-                                <p style="color:#FFD700;font-size:1rem;line-height:1.7;">
-                                    Maintaining good health while traveling starts with proper skincare—use sunscreen, stay hydrated, and cleanse regularly to prevent breakouts and irritation. Be mindful of common health issues like dehydration, jet lag, and digestive problems by drinking clean water, eating balanced meals, and getting adequate rest. For travel safety, research your destination’s local laws and customs, keep emergency contacts handy, and secure your belongings. Always carry essential medications and a basic first aid kit, and stay informed about any health advisories or travel alerts.
+                        <div class="project-info">
+                            <h3 style="font-weight:normal;">E-Commerce Website</h3>
+                            <button class="btn" id="viewEcomProjectBtn">View Projects</button>
+                            <div class="project-details"
+                                style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                                <p style="color:#FFD700;font-size:1rem;line-height:1.7;font-weight:normal;">
+                                    E-Commerce Website is a full-featured online store solution designed to deliver a
+                                    seamless shopping experience. It includes a dynamic shopping cart, secure user
+                                    authentication, and integrated payment processing, making it easy for customers to
+                                    browse, purchase, and manage orders. With a sleek interface and robust backend, this
+                                    platform is ideal for businesses looking to scale their digital storefront
+                                    efficiently.
                                 </p>
                             </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Modal for projects -->
-    <div id="projectsModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeProjectsModalBtn">&times;</span>
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="https://github.com/MPENDULO97/ecommerce-site" target="_blank">E-Commerce Website</a></li>
-          <li><a href="https://github.com/MPENDULO97/task-manager" target="_blank">Solutions App</a></li>
-          <li><a href="https://github.com/MPENDULO97/data-dashboard" target="_blank">Health and Travel Safety guide App</a></li>
-          <!-- Add more project links here -->
-        </ul>
-      </div>
-    </div>
-
-    <!-- Modal for single project card -->
-    <div id="singleProjectModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeSingleProjectModalBtn">&times;</span>
-        <h3>Solutions App Projects</h3>
-        <ul>
-          <li><a href="https://creator-studio-2cce8e5b.base44.app" target="_blank">Content Generator.ai</a></li>
-            <li><a href="https://edu-smart-sa-56d86ab4.base44.app" target="_blank">EduSmart App.ai</a></li>
-            <li><a href="https://read-wise-c83981fe.base44.app" target="_blank">Read-Wise App.ai</a></li>
-            <li><a href="https://clause-guard-92a77f7f.base44.app" target="_blank">Cluase-guard App.ai</a></li>
-             <li><a href="https://work-connect-372eb2f9.base44.app" target="_blank">Work-Connect App.ai</a></li>
-              <li><a href="https://swift-drop-6b2efbb3.base44.app" target="_blank">SWIFT-DROP App.ai</a></li>
-          <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
-          <!-- Add more related project links here -->
-        </ul>
-      </div>
-    </div>
-
-    <!-- Modal for Dematologist App project card -->
-    <div id="dermProjectModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeDermProjectModalBtn">&times;</span>
-        <h3>Dematologist App Projects</h3>
-        <ul>
-          <li><a href="https://skin-solutions-pro-488d39f2.base44.app" target="_blank">Dematologist App.ai</a></li>
-          <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
-          
-          <!-- Add more related project links here -->
-        </ul>
-      </div>
-    </div>
-
-    <!-- Modal for E-Commerce Website project card -->
-    <div id="ecomProjectModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeEcomProjectModalBtn">&times;</span>
-        <h3>E-Commerce Website Projects</h3>
-        <ul>
-          <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
-          <li><a href="https://luxuria-f6717e8a.base44.app" target="_blank">Clothing-website.ai</a></li>
-          <li><a href="https://luxe-threads-23926ea9.base44.app" target="_blank">Clothing-Shop</a></li>
-          <!-- Add more related project links here -->
-        </ul>
-      </div>
-    </div>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates" style="background: url('images/mp5.jfif') center/cover no-repeat; position: relative;">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Certificates</h2>
-            </div>
-            <div class="certificates-container">
-                <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Software Development</h3>
-                    <p>CAPACITI</p>
-                    <p>Comprehensive program covering front-end and back-end technologies, databases, and deployment.</p>
-                    <a href="Certificates.MP/CAPACITI_merged (1).pdf" target="_blank" class="btn">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>FNB APP ACADEMY Certificates</h3>
-                    <p>Online Certification</p>
-                    <p>Mastery of modern JavaScript concepts, frameworks, and best practices.</p>
-                    <a href="Certificates.MP/FNBAPPACADEMY.pdf" target="_blank" class="btn">View Certificate</a>
-                </div>
-                
-                <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Walter Sisulu University Certificates</h3>
-                    <p>Certificate</p>
-                    <p>I hold an Honours degree in Political Studies, am currently pursuing a Master's in the same field, and have a Bachelor of Social Science in Criminology, Psychology, and Political Studies..</p>
-                    <a href="Certificates.MP/wsu97.pdf" target="_blank" class="btn">View Certificate</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact" style="background: url('images/mp6.jfif') center/cover no-repeat; position: relative;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/swift.jpg" alt="Project 2">
                         </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>mpendulogule382@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+27784351498/0660241992</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Western Cape, South AFRICA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xdklblqo" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                            <div style="margin-top:2rem;">
-                                <a href="resume/Gule Mpendulo cv .pdf" class="btn" download style="background: linear-gradient(90deg,#4a6cf7,#1d2144); color: white; font-weight: bold;">Download Resume</a>
+                        <div class="project-info">
+                            <h3>Solutions App</h3>
+                            <button class="btn" id="viewSingleProjectBtn">View Projects</button>
+                            <div class="project-details"
+                                style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                                <p style="color:#FFD700;font-size:1rem;line-height:1.7;">
+                                    Explore a suite of innovative AI-powered tools designed to elevate productivity and
+                                    learning. Solutions App Projects streamlines app development and lifecycle
+                                    management within Power Platform environments, enabling seamless customization and
+                                    deployment. Content Generator.ai empowers creators with smart, SEO-optimized app
+                                    descriptions tailored for visibility and engagement. EduSmart App.ai transforms
+                                    education through personalized learning, real-time quizzes, and intelligent content
+                                    summarization. Read-Wise App.ai acts as your AI meeting assistant, delivering smart
+                                    summaries, transcriptions, and actionable insights across platforms. Clause-guard
+                                    App.ai safeguards your business by analyzing contracts for hidden risks and offering
+                                    plain-language legal insights. Work-Connect App.ai enhances employee experience with
+                                    AI-driven communication, task management, and knowledge sharing across hybrid teams.
+                                    Finally, SWIFT-DROP App.ai is a complete courier and delivery business-in-a-box,
+                                    offering real-time tracking, merchant management, and white-label branding—all from
+                                    your mobile device.
+                                </p>
                             </div>
-                        <div id="thankyou-message" style="display:none; margin-top:2rem; padding:1.5rem; background:#e9ecef; border-radius:8px; color:#333; font-size:1.1rem;">
-                            <strong>Dear Visitor</strong><br><br>
-                            Thank you so much for taking the time to explore my portfolio and reach out to me! I truly appreciate your interest in my work.<br><br>
-                            I have received your message and will review it carefully. I typically respond to all inquiries within 24-48 hours during business days. If your message is urgent, please don't hesitate to mention that in your original email.<br><br>
-                            In the meantime, feel free to:<br>
-                            <ul>
-                                <li>Browse through my complete portfolio for additional projects</li>
-                                <li>Connect with me on LinkedIn</li>
-                                <li>Check out my latest work and updates</li>
-                            </ul>
-                            I'm excited about the possibility of working together or discussing potential opportunities. I look forward to connecting with you soon!<br><br>
-                            Best regards,<br>
-                            <strong>Mpendulo Gule</strong><br>
-                            Digital Associate @ CAPACITI<br>
-                            0784351498/0660241992<br>
-                            mpendulogule382@gmail.com<br>
-                            (27) Gule Mpendulo | LinkedIn
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/HTG.jfif" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Health and Travel Safety guide App</h3>
+                            <button class="btn" id="viewDermProjectBtn">View Projects</button>
+                            <div class="project-details"
+                                style="margin-top:1.5rem;background:#f8f9fa;padding:1rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                                <h4 style="color:#4a6cf7;margin-bottom:0.5rem;"></h4>
+                                <p style="color:#FFD700;font-size:1rem;line-height:1.7;">
+                                    Maintaining good health while traveling starts with proper skincare—use sunscreen,
+                                    stay hydrated, and cleanse regularly to prevent breakouts and irritation. Be mindful
+                                    of common health issues like dehydration, jet lag, and digestive problems by
+                                    drinking clean water, eating balanced meals, and getting adequate rest. For travel
+                                    safety, research your destination’s local laws and customs, keep emergency contacts
+                                    handy, and secure your belongings. Always carry essential medications and a basic
+                                    first aid kit, and stay informed about any health advisories or travel alerts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/gule-mpendulo-63198021b/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/MPENDULO97"><i class="fab fa-github"></i></a>
+        <!-- Modal for projects -->
+        <div id="projectsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeProjectsModalBtn">&times;</span>
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="https://github.com/MPENDULO97/ecommerce-site" target="_blank">E-Commerce Website</a>
+                    </li>
+                    <li><a href="https://github.com/MPENDULO97/task-manager" target="_blank">Solutions App</a></li>
+                    <li><a href="https://github.com/MPENDULO97/data-dashboard" target="_blank">Health and Travel Safety
+                            guide App</a></li>
+                    <!-- Add more project links here -->
+                </ul>
             </div>
-            <p>&copy; 2025 Mpendulo. All rights reserved.</p>
         </div>
-    </footer>
 
-    <!-- Modal functionality for projects -->
-    <script>
-// Modal functionality for projects
-function showModal(modalId) {
-  document.querySelectorAll('.modal').forEach(function(modal) {
-    modal.style.display = 'none';
-  });
-  var modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'block';
-  }
-}
-function closeModal(modalId) {
-  var modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'none';
-  }
-}
-// Project modal buttons
-var ecomBtn = document.getElementById('viewEcomProjectBtn');
-if (ecomBtn) ecomBtn.onclick = function() { showModal('ecomProjectModal'); };
-var singleBtn = document.getElementById('viewSingleProjectBtn');
-if (singleBtn) singleBtn.onclick = function() { showModal('singleProjectModal'); };
-var dermBtn = document.getElementById('viewDermProjectBtn');
-if (dermBtn) dermBtn.onclick = function() { showModal('dermProjectModal'); };
-// Close buttons
-var closeEcomBtn = document.getElementById('closeEcomProjectModalBtn');
-if (closeEcomBtn) closeEcomBtn.onclick = function() { closeModal('ecomProjectModal'); };
-var closeSingleBtn = document.getElementById('closeSingleProjectModalBtn');
-if (closeSingleBtn) closeSingleBtn.onclick = function() { closeModal('singleProjectModal'); };
-var closeDermBtn = document.getElementById('closeDermProjectModalBtn');
-if (closeDermBtn) closeDermBtn.onclick = function() { closeModal('dermProjectModal'); };
-// Hide modal when clicking outside
-window.onclick = function(event) {
-  document.querySelectorAll('.modal').forEach(function(modal) {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  });
-};
-</script>
+        <!-- Modal for single project card -->
+        <div id="singleProjectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeSingleProjectModalBtn">&times;</span>
+                <h3>Solutions App Projects</h3>
+                <ul>
+                    <li><a href="https://creator-studio-2cce8e5b.base44.app" target="_blank">Content Generator.ai</a>
+                    </li>
+                    <li><a href="https://edu-smart-sa-56d86ab4.base44.app" target="_blank">EduSmart App.ai</a></li>
+                    <li><a href="https://read-wise-c83981fe.base44.app" target="_blank">Read-Wise App.ai</a></li>
+                    <li><a href="https://clause-guard-92a77f7f.base44.app" target="_blank">Cluase-guard App.ai</a></li>
+                    <li><a href="https://work-connect-372eb2f9.base44.app" target="_blank">Work-Connect App.ai</a></li>
+                    <li><a href="https://swift-drop-6b2efbb3.base44.app" target="_blank">SWIFT-DROP App.ai</a></li>
+                    <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
+                    <!-- Add more related project links here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal for Dematologist App project card -->
+        <div id="dermProjectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeDermProjectModalBtn">&times;</span>
+                <h3>Dematologist App Projects</h3>
+                <ul>
+                    <li><a href="https://skin-solutions-pro-488d39f2.base44.app" target="_blank">Dematologist App.ai</a>
+                    </li>
+                    <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
+
+                    <!-- Add more related project links here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal for E-Commerce Website project card -->
+        <div id="ecomProjectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeEcomProjectModalBtn">&times;</span>
+                <h3>E-Commerce Website Projects</h3>
+                <ul>
+                    <li><a href="https://github.com/" target="_blank">GitHub Repository</a></li>
+                    <li><a href="https://luxuria-f6717e8a.base44.app" target="_blank">Clothing-website.ai</a></li>
+                    <li><a href="https://luxe-threads-23926ea9.base44.app" target="_blank">Clothing-Shop</a></li>
+                    <!-- Add more related project links here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates"
+            style="background: url('images/mp5.jfif') center/cover no-repeat; position: relative;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Certificates</h2>
+                </div>
+                <div class="certificates-container">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>CAPACITI</p>
+                        <p>Comprehensive program covering front-end and back-end technologies, databases, and
+                            deployment.</p>
+                        <a href="Certificates.MP/CAPACITI_merged (1).pdf" target="_blank" class="btn">View
+                            Certificate</a>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>FNB APP ACADEMY Certificates</h3>
+                        <p>Online Certification</p>
+                        <p>Mastery of modern JavaScript concepts, frameworks, and best practices.</p>
+                        <a href="Certificates.MP/FNBAPPACADEMY.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Walter Sisulu University Certificates</h3>
+                        <p>Certificate</p>
+                        <p>I hold an Honours degree in Political Studies, am currently pursuing a Master's in the same
+                            field, and have a Bachelor of Social Science in Criminology, Psychology, and Political
+                            Studies..</p>
+                        <a href="Certificates.MP/wsu97.pdf" target="_blank" class="btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact"
+            style="background: url('images/mp6.jfif') center/cover no-repeat; position: relative;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>mpendulogule382@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+27784351498/0660241992</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Western Cape, South AFRICA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form" action="https://formspree.io/f/xdklblqo" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                            <div style="margin-top:2rem;">
+                                <a href="resume/Gule Mpendulo cv .pdf" class="btn" download
+                                    style="background: linear-gradient(90deg,#4a6cf7,#1d2144); color: white; font-weight: bold;">Download
+                                    Resume</a>
+                            </div>
+                            <div id="thankyou-message"
+                                style="display:none; margin-top:2rem; padding:1.5rem; background:#e9ecef; border-radius:8px; color:#333; font-size:1.1rem;">
+                                <strong>Dear Visitor</strong><br><br>
+                                Thank you so much for taking the time to explore my portfolio and reach out to me! I
+                                truly appreciate your interest in my work.<br><br>
+                                I have received your message and will review it carefully. I typically respond to all
+                                inquiries within 24-48 hours during business days. If your message is urgent, please
+                                don't hesitate to mention that in your original email.<br><br>
+                                In the meantime, feel free to:<br>
+                                <ul>
+                                    <li>Browse through my complete portfolio for additional projects</li>
+                                    <li>Connect with me on LinkedIn</li>
+                                    <li>Check out my latest work and updates</li>
+                                </ul>
+                                I'm excited about the possibility of working together or discussing potential
+                                opportunities. I look forward to connecting with you soon!<br><br>
+                                Best regards,<br>
+                                <strong>Mpendulo Gule</strong><br>
+                                Digital Associate @ CAPACITI<br>
+                                0784351498/0660241992<br>
+                                mpendulogule382@gmail.com<br>
+                                (27) Gule Mpendulo | LinkedIn
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/gule-mpendulo-63198021b/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/MPENDULO97"><i class="fab fa-github"></i></a>
+                </div>
+                <p>&copy; 2025 Mpendulo. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Modal functionality for projects -->
+        <script>
+            // Modal functionality for projects
+            function showModal(modalId) {
+                document.querySelectorAll('.modal').forEach(function (modal) {
+                    modal.style.display = 'none';
+                });
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            }
+            function closeModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            }
+            // Project modal buttons
+            var ecomBtn = document.getElementById('viewEcomProjectBtn');
+            if (ecomBtn) ecomBtn.onclick = function () { showModal('ecomProjectModal'); };
+            var singleBtn = document.getElementById('viewSingleProjectBtn');
+            if (singleBtn) singleBtn.onclick = function () { showModal('singleProjectModal'); };
+            var dermBtn = document.getElementById('viewDermProjectBtn');
+            if (dermBtn) dermBtn.onclick = function () { showModal('dermProjectModal'); };
+            // Close buttons
+            var closeEcomBtn = document.getElementById('closeEcomProjectModalBtn');
+            if (closeEcomBtn) closeEcomBtn.onclick = function () { closeModal('ecomProjectModal'); };
+            var closeSingleBtn = document.getElementById('closeSingleProjectModalBtn');
+            if (closeSingleBtn) closeSingleBtn.onclick = function () { closeModal('singleProjectModal'); };
+            var closeDermBtn = document.getElementById('closeDermProjectModalBtn');
+            if (closeDermBtn) closeDermBtn.onclick = function () { closeModal('dermProjectModal'); };
+            // Hide modal when clicking outside
+            window.onclick = function (event) {
+                document.querySelectorAll('.modal').forEach(function (modal) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            };
+        </script>
 </body>
+
 </html>
