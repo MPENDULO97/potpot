@@ -1058,8 +1058,10 @@
                             <h3>Walter Sisulu University Certificates</h3>
                             <p>Certificate</p>
                             <div class="certificate-details">
-                                <p>I hold an Honours degree in Political Studies, am currently pursuing a Master's in the
-                                    same field, and have a Bachelor of Social Science in Criminology, Psychology, and Political
+                                <p>I hold an Honours degree in Political Studies, am currently pursuing a Master's in
+                                    the
+                                    same field, and have a Bachelor of Social Science in Criminology, Psychology, and
+                                    Political
                                     Studies..</p>
                                 <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                             </div>
@@ -1114,7 +1116,9 @@
                                 </div>
                                 <div>
                                     <h4>LinkedIn</h4>
-                                    <p><a href="https://www.linkedin.com/in/gule-mpendulo-63198021b/" target="_blank" style="color:#fff;text-decoration:underline;font-weight:600;">Connect with me on LinkedIn</a></p>
+                                    <p><a href="https://www.linkedin.com/in/gule-mpendulo-63198021b/" target="_blank"
+                                            style="color:#fff;text-decoration:underline;font-weight:600;">Connect with
+                                            me on LinkedIn</a></p>
                                 </div>
                             </div>
                         </div>
@@ -1221,16 +1225,18 @@
             });
         };
 
-        // Toggle Read More functionality for project details
+        // Toggle Read More functionality for project and certificate details
         function toggleReadMore(button) {
-            const projectDetails = button.closest('.project-details');
-            const isExpanded = projectDetails.classList.contains('expanded');
+            const detailsContainer = button.closest('.project-details') || button.closest('.certificate-details');
+            if (!detailsContainer) return;
             
+            const isExpanded = detailsContainer.classList.contains('expanded');
+
             if (isExpanded) {
-                projectDetails.classList.remove('expanded');
+                detailsContainer.classList.remove('expanded');
                 button.textContent = 'Read More';
             } else {
-                projectDetails.classList.add('expanded');
+                detailsContainer.classList.add('expanded');
                 button.textContent = 'Read Less';
             }
         }
