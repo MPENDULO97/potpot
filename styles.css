@@ -443,7 +443,7 @@ section {
 
 .project-info {
     padding: 1.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -467,7 +467,7 @@ section {
 
 .project-info .project-details {
     margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 2rem !important;
     display: flex !important;
     flex-direction: column !important;
     min-height: 180px !important;
@@ -717,6 +717,39 @@ section {
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.certificate-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.certificate-details p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    height: 3.2em !important;
+    line-height: 1.6 !important;
+    max-height: 3.2em;
+    margin-bottom: 0 !important;
+}
+
+.certificate-details.expanded p {
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+.certificate-card .read-more-btn {
+    margin-top: 0.5rem;
+    position: relative;
+    left: 0;
+    transform: none;
 }
 
 /* Contact Section */
