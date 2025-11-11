@@ -451,12 +451,13 @@ section {
 }
 
 .project-info h3 {
-    color: #1a1a1a;
-    font-weight: 700;
+    color: #FFA500 !important;
+    font-weight: 700 !important;
     margin-bottom: 1rem;
     min-height: 3em;
     display: flex;
     align-items: center;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .project-info .btn {
@@ -693,14 +694,15 @@ section {
 }
 
 .certificate-card h3 {
-    color: #000000 !important;
-    font-weight: 700;
+    color: #FFA500 !important;
+    font-weight: 700 !important;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     min-height: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .certificate-card p {
