@@ -672,7 +672,6 @@ section {
 .certificate-card {
     background: white;
     padding: 1.5rem;
-    padding-bottom: 5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -713,16 +712,15 @@ section {
 }
 
 .certificate-card .btn {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 1rem;
+    align-self: center;
 }
 
 .certificate-details {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    min-height: 100px;
 }
 
 .certificate-details p {
@@ -738,6 +736,10 @@ section {
     margin-bottom: 0 !important;
 }
 
+.certificate-details.expanded {
+    min-height: auto;
+}
+
 .certificate-details.expanded p {
     display: block !important;
     -webkit-line-clamp: unset !important;
@@ -746,7 +748,7 @@ section {
 }
 
 .certificate-card .read-more-btn {
-    margin-top: 0.5rem;
+    margin-top: auto;
     position: relative;
     left: 0;
     transform: none;
