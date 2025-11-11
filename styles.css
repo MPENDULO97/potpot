@@ -467,6 +467,7 @@ section {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    min-height: 180px;
 }
 
 .project-info .project-details p {
@@ -481,6 +482,11 @@ section {
     height: 5.1em !important;
     line-height: 1.7 !important;
     max-height: 5.1em;
+    margin-bottom: 0 !important;
+}
+
+.project-info .project-details.expanded {
+    min-height: auto;
 }
 
 .project-info .project-details.expanded p {
@@ -497,7 +503,7 @@ section {
     font-weight: 600;
     cursor: pointer;
     padding: 0.5rem 0;
-    margin-top: 0.5rem;
+    margin-top: auto;
     text-decoration: underline;
     font-size: 0.9rem;
     align-self: flex-start;
