@@ -341,8 +341,18 @@ section {
     font-weight: 700;
 }
 
-.skills p, .skills h3, .skills h4 {
-    color: #1a1a1a;
+.skills p {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.skills h3 {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+.skills h4 {
+    color: #000000 !important;
     font-weight: 600;
 }
 
@@ -370,13 +380,22 @@ section {
 
 .skill-icon {
     font-size: 2.5rem;
-    color: var(--danger);
+    color: var(--primary);
     margin-bottom: 1rem;
 }
 
-.skill-item h3, .skill-item p {
-    color: #1a1a1a;
+.skill-item h3 {
+    color: #000000 !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-item p {
+    color: #000000 !important;
     font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Projects Section */
@@ -549,8 +568,18 @@ section {
     font-weight: 700;
 }
 
-.certificates p, .certificates h3, .certificates h4 {
-    color: #1a1a1a;
+.certificates p {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.certificates h3 {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+.certificates h4 {
+    color: #000000 !important;
     font-weight: 600;
 }
 
@@ -575,8 +604,23 @@ section {
 
 .certificate-icon {
     font-size: 3rem;
-    color: var(--accent);
+    color: #6f42c1;
     margin-bottom: 1rem;
+}
+
+.certificate-card h3 {
+    color: #000000 !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.certificate-card p {
+    color: #000000 !important;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
 }
 
 /* Contact Section */
