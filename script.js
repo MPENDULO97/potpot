@@ -20,6 +20,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
+        
+        // Handle home link
         if (targetId === '#' || targetId === '#home') {
             window.scrollTo({
                 top: 0,
@@ -28,9 +30,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             return;
         }
         
+        // Handle other section links
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            const headerOffset = 100;
+            const headerOffset = 100; // Account for fixed header
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
             

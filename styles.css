@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.65);
 }
 
 #about .container {
@@ -60,6 +60,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -323,7 +327,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     z-index: 0;
 }
 
@@ -332,8 +336,14 @@ section {
     z-index: 1;
 }
 
+.skills .section-title h2 {
+    color: #FFA500;
+    font-weight: 700;
+}
+
 .skills p, .skills h3, .skills h4 {
-    color: #333;
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
  .skills-container {
@@ -365,7 +375,8 @@ section {
 }
 
 .skill-item h3, .skill-item p {
-    color: #333;
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 /* Projects Section */
@@ -408,12 +419,14 @@ section {
 }
 
 .project-info h3 {
-    color: #333;
+    color: #1a1a1a;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .project-info p {
-    color: #666;
+    color: #2a2a2a;
+    font-weight: 500;
 }
 
 .projects {
@@ -427,7 +440,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     z-index: 0;
 }
 
@@ -436,10 +449,24 @@ section {
     z-index: 1;
 }
 
-.projects .section-title h2,
-.projects .project-info h3,
+.projects .section-title h2 {
+    color: #FFA500;
+    font-weight: 700;
+}
+
+.projects .project-info h3 {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
 .projects .project-info p {
-    color: #333;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.projects .project-details p {
+    color: #1a1a1a !important;
+    font-weight: 600;
 }
 
 /* About Section */
@@ -474,11 +501,11 @@ section {
 .about-text h3,
 .about-text h4,
 .about-text h5 {
-    color: orange;
+    color: #FFA500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .about-text p,
@@ -486,7 +513,8 @@ section {
 .about-text span,
 .about-text .education-item {
     color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .education-item {
@@ -507,7 +535,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     z-index: 0;
 }
 
@@ -516,8 +544,14 @@ section {
     z-index: 1;
 }
 
+.certificates .section-title h2 {
+    color: #FFA500;
+    font-weight: 700;
+}
+
 .certificates p, .certificates h3, .certificates h4 {
-    color: #333;
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 .certificates-container {
@@ -557,7 +591,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .contact .container {
@@ -565,11 +599,22 @@ section {
     z-index: 1;
 }
 
-.contact .section-title h2,
-.contact .contact-item h4,
+.contact .section-title h2 {
+    color: #FFA500;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contact .contact-item h4 {
+    color: #FFA500;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 .contact .contact-item p {
     color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .contact-container {
@@ -617,7 +662,8 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: #1a1a1a;
 }
 
 .form-control {
@@ -664,10 +710,9 @@ footer {
     color: white;
     padding: 3rem 0;
     text-align: center;
-    margin-top: 0;
+    margin-top: auto;
     width: 100%;
-    position: relative;
-    bottom: 0;
+    flex-shrink: 0;
 }
 
 .social-links {
