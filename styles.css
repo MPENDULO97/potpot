@@ -465,6 +465,9 @@ section {
 .project-info .project-details {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-info .project-details p {
@@ -476,6 +479,11 @@ section {
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all 0.3s ease;
+    flex-grow: 1;
+}
+
+.project-info .project-details.expanded {
+    min-height: auto;
 }
 
 .project-info .project-details.expanded p {
@@ -493,6 +501,7 @@ section {
     margin-top: 0.5rem;
     text-decoration: underline;
     font-size: 0.9rem;
+    align-self: flex-start;
 }
 
 .read-more-btn:hover {
