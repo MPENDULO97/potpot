@@ -2,6 +2,28 @@
     background: url('images/sea-9714469_1280.jpg') center/cover no-repeat;
     position: relative;
 }
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#about .container {
+    position: relative;
+    z-index: 1;
+}
+
+#about p, 
+#about li, 
+#about span {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
 .hero {
     margin-top: 130px; /* Increased to ensure navbar does not overlap */
 }
@@ -24,12 +46,20 @@ section {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    color: var(--primary);
+    color: #333;
     line-height: 1.6;
     background: linear-gradient(135deg, #4a6cf7 0%, #FFA500 100%);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -37,6 +67,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--secondary);
+}
+
+main {
+    flex: 1;
 }
 
 .container {
@@ -281,6 +315,10 @@ section {
     background-color: var(--light);
 }
 
+.skills p, .skills h3, .skills h4 {
+    color: #333;
+}
+
  .skills-container {
      display: flex;
      flex-direction: row;
@@ -307,6 +345,10 @@ section {
     font-size: 2.5rem;
     color: var(--danger);
     margin-bottom: 1rem;
+}
+
+.skill-item h3, .skill-item p {
+    color: #333;
 }
 
 /* Projects Section */
@@ -346,6 +388,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .about-text p,
@@ -353,6 +396,7 @@ section {
 .about-text span,
 .about-text .education-item {
     color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .education-item {
@@ -363,6 +407,10 @@ section {
 /* Certificates Section */
 .certificates {
     background-color: var(--light);
+}
+
+.certificates p, .certificates h3, .certificates h4 {
+    color: #333;
 }
 
 .certificates-container {
@@ -391,6 +439,32 @@ section {
 }
 
 /* Contact Section */
+.contact {
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact .section-title h2,
+.contact .contact-item h4,
+.contact .contact-item p {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -480,9 +554,11 @@ textarea.form-control {
 /* Footer */
 footer {
     background-color: var(--primary);
-    color: var(--secondary);
+    color: white;
     padding: 3rem 0;
     text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
 
 .social-links {
