@@ -454,6 +454,9 @@ section {
     color: #1a1a1a;
     font-weight: 700;
     margin-bottom: 1rem;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
 }
 
 .project-info .btn {
@@ -463,11 +466,12 @@ section {
 }
 
 .project-info .project-details {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 180px;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 180px !important;
+    padding: 1rem !important;
 }
 
 .project-info .project-details p {
