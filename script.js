@@ -108,3 +108,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Listen for scroll events
 window.addEventListener('scroll', animateOnScroll);
+
+// 
+Toggle Read More functionality for project details
+function toggleReadMore(button) {
+    const projectDetails = button.closest('.project-details');
+    const isExpanded = projectDetails.classList.contains('expanded');
+    
+    if (isExpanded) {
+        projectDetails.classList.remove('expanded');
+        button.textContent = 'Read More';
+    } else {
+        projectDetails.classList.add('expanded');
+        button.textContent = 'Read Less';
+    }
+}
