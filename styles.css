@@ -672,10 +672,15 @@ section {
 .certificate-card {
     background: white;
     padding: 1.5rem;
+    padding-bottom: 5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
 }
 
 .certificate-card:hover {
@@ -693,6 +698,10 @@ section {
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 1rem;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .certificate-card p {
@@ -701,6 +710,13 @@ section {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0.8rem;
+}
+
+.certificate-card .btn {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Contact Section */
