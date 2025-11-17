@@ -55,7 +55,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
-    background: linear-gradient(135deg, #4a6cf7 0%, #FFA500 100%);
+    background: white;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
